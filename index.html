@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Danidev819 - Portafolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link href="./css/scrolling-nav.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="home">
+	<nav class="navbar navbar-default navbar-fixed-top" role=navigation>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+					<span class=sr-only>Navegación de palanca</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="https://discord.gg/ZMGUqDbuQT"><img src="./img/logo.png"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse-main">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#home">Inicio</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre mi</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portafolio</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contacto</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+<div id="home">
+	<div class="landing-text">
+		<h1>Danidev819</h1>
+		<h2 id="element"></h2>
+		<a href="#contact" class=" js-scroll-trigger btn btn-default btn-lg">Contactame</a>
+	</div>
+</div>
+</section>
+
+
+<section id="about">
+	<div class="about">
+		<div class="container">
+			<div class="about-info">
+		    	<h1>Sobre Mi</h1>
+				<p>Hola! Me llamo Dani, tengo 15 años y llevo desarrollando desde los 12, hace 3 años me empezo a interesar la programacion y empeze a hacer cosas, ahora mi proposito es hacer cosas gratis y enseñarselas a la gente<br><br>
+
+				Comencé a aprender Java y a crear complementos de Minecraft, hasta ahora he participado en la programación de clientes de Minecraft y he echo mis plugins de Minecraft como InfinityHubCore, MultiAnnouncer, AdvancedBlocker, entre otros<br><br></p>		
+			</div>
+		</div>
+	</div>
+</section>
+<section id="portfolio">
+	<div class="portfolio">
+		<div class="container container-fluid">
+			<div class="portfolio-info">
+				<h1>PORTAFOLIO</h1>
+				<p>Experienca con Java: 4 años, JavaScript: 2 años, CSS: 1 año. (Aprendiendo Ciber Seguridad)</p>
+		</div>
+	</div>
+</section>
+
+<section id="contact">
+	<div class="contact">
+		<div class="container container-fluid">
+			<div class="contact-info">
+				<h1>CONTACTO</h1>
+				<p>Puedes contactarme via todos estos enlaces (Discord Recomendado).</p>
+				<div class="socialIcons">
+					<a href="https://discord.gg/nFFR4R4mTX" target="_blank"><img class="HoverBToW" src="./img/discord.png"></a>        
+					<a href="https://www.spigotmc.org/members/danipro_2007.553242/" target="_blank"><img class="HoverBToW" src="./img/spigot-og.png"></a>
+					<a href="https://www.mc-market.org/members/301886/" target="_blank"><img class="HoverBToW" src="./img/mcmarket1.png"></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<div class="footer">
+	<div class="container">
+	</div>
+		<a href="#home" id="scroll" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</div>
+
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.9.0/typeit.js" />
+    <script src="https://unpkg.com/randomcolor@0.5.3/randomColor.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+		</script>
+	<script type="text/javascript">
+		$(document).ready(function(){ 
+    		$(window).scroll(function(){ 
+        		if ($(this).scrollTop() > 100) { 
+           		 $('#scroll').fadeIn(); 
+        		} else { 
+            		$('#scroll').fadeOut(); 
+        		} 
+    			});
+    		}); 
+	</script>
+</body>
+</html>
