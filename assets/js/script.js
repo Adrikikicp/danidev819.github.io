@@ -37,7 +37,7 @@ function startIntroTyping() {
 function typerStartTyping(typer) {
   typer.reset();
 
-  let text = ['Java', 'JavaScript', 'C#', 'HTML', 'CSS'];
+  let text = ['Java', 'JavaScript', 'C#'];
 
   text.forEach(function (language, index) {
     typer.move(null);
