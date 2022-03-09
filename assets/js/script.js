@@ -2,7 +2,7 @@ let mobile = 'ontouchstart' in document.documentElement;
 
 let switchAllowed = false;
 
-function openSocial(type) {
+const openSocial = type => {
   let url = 'about:blank';
 
   switch (type) {
@@ -20,7 +20,7 @@ function openSocial(type) {
   window.open(url);
 }
 
-function startIntroTyping() {
+const startIntroTyping = () => {
   new TypeIt('#intro-text', {
     speed: 50,
   })
@@ -29,17 +29,17 @@ function startIntroTyping() {
     .type(`${mobile ? 'tap' : 'Press any key'} to enter.`)
     .go();
 
-  setTimeout(function () {
+  setTimeout(() => {
     switchAllowed = true;
   }, 2500);
 }
 
-function typerStartTyping(typer) {
+const typerStartTyping = typer => {
   typer.reset();
 
   let text = ['Java', 'JavaScript', 'C#'];
 
-  text.forEach(function (language, index) {
+  text.forEach((language, index) => {
     typer.move(null);
     typer.type(language, { delay: 1000 });
     typer.pause(1000);
@@ -50,7 +50,7 @@ function typerStartTyping(typer) {
   typer.go();
 }
 
-function startMainTyping() {
+const startMainTyping = () => {
   let typer = new TypeIt('#subtext', {
     speed: 50,
     afterComplete: async () => {
@@ -61,24 +61,24 @@ function startMainTyping() {
   typerStartTyping(typer);
 }
 
-function switchScreen() {
+const switchScreen = () => {
   document.title = 'Danidev819 | Home';
 
-  $('.intro').fadeOut(1000, function () {
+  $('.intro').fadeOut(1000, () => {
     $('.bg-image').fadeIn(1000);
-    $('.main').fadeIn(1000, function () {
+    $('.main').fadeIn(1000, () => {
       startMainTyping();
     });
   });
 
-  ['background', 'rain'].forEach(function (audioName) {
+  ['background', 'rain'].forEach(audioName => {
     let fullPath = `assets/audio/${audioName}.mp3`;
 
     let audioElement = document.createElement('audio');
     audioElement.setAttribute('src', fullPath);
     audioElement.style.display = 'none';
 
-    audioElement.addEventListener('ended', function () {
+    audioElement.addEventListener('ended', () => {
       this.currentTime = 0;
       this.play();
     });
@@ -87,20 +87,20 @@ function switchScreen() {
   });
 }
 
-document.addEventListener('keydown', function (e) {
+document.addEventListener('keydown', e => {
   if (switchAllowed) {
     switchAllowed = false;
     switchScreen();
   }
 });
 
-document.addEventListener('touchstart', function (e) {
+document.addEventListener('touchstart', e => {
   if (switchAllowed && mobile) {
     switchAllowed = false;
     switchScreen();
   }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   startIntroTyping();
 });
