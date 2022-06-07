@@ -1,3 +1,7 @@
+import * as template from '/modules/templates.js';
+import handlebars;
+
+
 let mobile = 'ontouchstart' in document.documentElement;
 
 let switchAllowed = false;
@@ -37,7 +41,7 @@ const startIntroTyping = () => {
 const typerStartTyping = typer => {
   typer.reset();
 
-  let text = ['Java', 'JavaScript', 'C#', 'Python'];
+  let text = template.compiledTemplate1;
 
   text.forEach((language, index) => {
     typer.move(null);
